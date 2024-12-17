@@ -5,6 +5,7 @@
 const Characters = () => {
   return (
     <div>
+      <h1>Desarrollo</h1>
       
     </div>
   )
