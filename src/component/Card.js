@@ -9,6 +9,7 @@ const Card = ({ data }) => {
     <>
         <div>
            <h4>{name}</h4> 
+           <h3>Crear Personaje</h3>
         </div>
     </>
  
