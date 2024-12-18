@@ -1,14 +1,36 @@
-// import React, { useContext }from 'react'
-// import { Context } from '../../store/appContext'
-// import Card from "../component/Card";
+import { useContext }from 'react'
+import { Context } from '../../store/appContext'
+import Card from "../component/Card";
 
-const Characters = () => {
-  return (
-    <div>
-      <h1>Desarrollo</h1>
-      
+
+const list = () => {
+
+    const { store, actions } = useContext(Context);
+    const charactersList = store.characters;
+    actions.getCharacters();
+
+
+    return (
+      <div className="row">
+      <div className="d-flex justify-content-end">
+      </div>
+      <div className="row">
+        {charactersList.length > 0 ? (
+          charactersList.map((character) => (
+            <Card key={character.id} data={character} />
+          ))
+        ) : (
+          <h1>Vacio</h1>
+        )}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Characters
+
+
+ 
+    
+
+
+export default list
