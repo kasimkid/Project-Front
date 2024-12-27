@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router';
 
 
@@ -17,9 +17,9 @@ const Card = ({ data }) => {
               />
               <div className="card-body">
                 <h4 className="card-title">{ name }</h4>
-                {/* <Link to={`/detalle-personaje/${id}`} className="btn-btn-primary">
+                <Link to={`/detalle-personaje/${id}`} className="btn-btn-primary">
                   <i className="bi bi-search"></i>
-                  </Link> */}
+                  </Link>
               </div>
           </div>
         </div>
@@ -29,3 +29,5 @@ const Card = ({ data }) => {
 };
 
 export default Card
+
+

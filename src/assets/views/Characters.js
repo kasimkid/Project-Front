@@ -3,7 +3,7 @@ import { Context } from '../../store/appContext'
 import Card from "../component/Card";
 
 
-const list = () => {
+const List = () => {
 
     const { store, actions } = useContext(Context);
     const charactersList = store.characters;
@@ -26,11 +26,4 @@ const list = () => {
     </div>
   );
 };
-
-
-
- 
-    
-
-
-export default list
+export default List;

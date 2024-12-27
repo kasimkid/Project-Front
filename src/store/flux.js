@@ -1,10 +1,8 @@
-const getState = ({getStore, getActions, setStore }) => {
+const getState = ({setStore }) => {
     return {
         store: {
             characters: [],
-            locations: [], 
             character: "",
-            location: "",
 
         },
         actions:{
@@ -15,10 +13,11 @@ const getState = ({getStore, getActions, setStore }) => {
                 "https://rickandmortyapi.com/api/character";
                 const resp = await fetch(url);
                 const data = await resp.json();
-                setStore({characters:data.results})
+                setStore({characters:data.results});
             }
 
             
         }
-    }
-}
+    };
+};
+export default getState;
